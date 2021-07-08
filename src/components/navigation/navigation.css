@@ -1,0 +1,25 @@
+nav {
+  width: 80%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  align-items: center;
+  margin: 20px
+}
+
+.header__title h1 {
+  color: var(--font-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
