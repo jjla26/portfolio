@@ -1,11 +1,13 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react'
 
-import HomePage from './components/homePage/homePage'
-import Posts from './components/posts/posts'
-import Projects from './components/projects/projects'
-import SinglePost from './components/singlePost/singlePost'
-import SingleProject from './components/singleProject/singleProject'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css';
+
+import HomePage from './components/homePage/HomePage'
+import Posts from './components/posts/Posts'
+import Projects from './components/projects/Projects'
+import SinglePost from './components/singlePost/SinglePost'
+import SingleProject from './components/singleProject/SingleProject'
 
 function App() {
   return (
