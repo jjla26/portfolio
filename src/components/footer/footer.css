@@ -1,0 +1,27 @@
+.footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px
+}
+
+.footer p {
+  margin: 0;
+}
+
+.social__link {
+  margin: 10px
+}
+
+.social__link svg {
+  fill: var(--font-color);
+}
+
+.social__link:hover {
+  text-decoration: none;
+}
+
+.social__icon--dark {
+  filter: invert(1);
+}
