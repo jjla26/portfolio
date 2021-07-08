@@ -1,0 +1,129 @@
+html {
+  --primary-color: #e0e4e0;
+  --secondary-color: #fafafa;
+  --tertiary-color: #00a8a8;
+  --font-color: #222429;
+  --title-font-weight: 400;
+}
+
+html[data-theme="dark"] {
+  --primary-color: #222429;
+  --secondary-color: #444;
+  --font-color: #e0e4e0;
+  --tertiary-color: #41c7c7;
+  --title-font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto mono', monospace;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+section {
+  padding: 20px 100px
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--title-font-weight);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: var(--title-font-weight);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: var(--title-font-weight);
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--tertiary-color);
+  text-decoration: none;
+  text-transform: uppercase; 
+  position: relative;
+}
+
+a::after {
+  content: "";
+  bottom: 10;
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  background: var(--tertiary-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover::after { 
+  width: 100%;
+  left: 0; 
+}
+
+button,
+.button {
+  font-size: 20px;
+  height: 50px;
+  min-width: 140px;
+  font-weight: var(--title-font-weight);
+  background-color: transparent;
+  color: var(--font-color);
+  font-variant: small-caps;
+  border: 1px dotted var(--font-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px
+}
+
+button:hover,
+.button:hover {
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--font-color);
+  color: var(--font-color);
+}
+
+input,
+textarea {
+  font-family: 'Roboto mono', monospace;
+  background-color: inherit;
+  border: 1px solid var(--font-color);
+  color: var(--font-color);
+  min-height: 50px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--tertiary-color)
+}
+
+textarea {
+  height: 200px;
+}
+
+
+@media all and (max-width: 992px) {
+  section {
+    padding: 20px;
+  }
+}
