@@ -8,30 +8,8 @@ import Contact from '../contact/Contact'
 import Projects from '../projects/Projects'
 import ThemeSwitch from '../themeSwitch/ThemeSwitch'
 
-export default function HomePage() {
-
-  const [ switchValue, setSwitchValue ] = useState(false)
-
-  useEffect(() => {
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      if (currentTheme === 'dark') {
-        setSwitchValue(true)
-      }
-    }
-  }, [])
-
-  const handleSwitch = e => {
-    setSwitchValue(e.target.checked)
-    if (e.target.checked) {
-      localStorage.setItem('theme', 'dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    }
-  }
+export default function HomePage(props) {
+  const { switchValue, handleSwitch } = props
 
   return (
     <div>
@@ -41,7 +19,6 @@ export default function HomePage() {
       <About />
       <Projects />
       <Contact />
-      <Footer dark={switchValue} />
     </div>
   )
 }
