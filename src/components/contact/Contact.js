@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { useForm } from '@formspree/react';
 
 import './contact.css'
 
 export default function Contact() {
+  const [ formState, handleSubmit ] = useForm(process.env.REACT_APP_EMAIL_PORTFOLIO_ENDPOINT);
   const [ name, setName ] = useState('')
   const [ errorName, setErrorName ] = useState('')
   const [ email, setEmail ] = useState('')
@@ -11,34 +13,20 @@ export default function Contact() {
   const [ errorSubject, setErrorSubject ] = useState('')
   const [ message, setMessage ] = useState('')
   const [ errorMessage, setErrorMessage ] = useState('')
-  const [ loading, setLoading ] = useState(false)
   const [ feedback, setFeedback ] = useState('')
   const [ error, setError ] = useState('')
 
-  const handleSubmit = async (e) => {
+  const onSubmitForm = async (e) => {
     e.preventDefault()
     e.target.reset()
-    setLoading(true)
     if(validate()){
-      const data = {
-        data: {
-          name,
-          email,
-          subject,
-          message
-        }
-      }
       try {
-        await fetch(process.env.REACT_APP_EMAIL_PORTFOLIO_ENDPOINT, {
-          method: 'POST',
-          body: JSON.stringify(data)
-        })      
+        await handleSubmit(e)  
+        console.log("asdasdasdsadad enviado")
         resetForm()
-        setLoading(false)
-        setFeedback('Email successfully sent')
+        setFeedback('Your message was successfully sent !')
         setTimeout(() => setFeedback(''), 4000)
       } catch (error) {
-        setLoading(false)
         setError('The email was not send. Try again later')
         setTimeout(() => setError(''),4000)
       }
@@ -116,7 +104,7 @@ export default function Contact() {
     <section id='contact' className='contact'>
       <h2 className='contact__title'>NEED TO REACH OUT? GET IN TOUCH</h2>
       <div className='contact__container'>
-        <form className='contact__form' onSubmit={handleSubmit}>
+        <form className='contact__form' onSubmit={onSubmitForm} >
           <div className='contact__input-group'>
             <label htmlFor='name'>Name</label>
             <input id='name' name='name' value={name} type='text' placeholder='Ex: Julio' onChange={e => {
@@ -143,20 +131,20 @@ export default function Contact() {
           </div>
           <div className='contact__input-group'>
             <label htmlFor='message'>Message</label>
-            <textarea id='message' value={message} placeholder='You can type your message here' onChange={e => {
+            <textarea id='message' name='message' value={message} placeholder='You can type your message here' onChange={e => {
               setMessage(e.target.value)
               validateMessage(e.target.value)
             }} ></textarea>
             {errorMessage && <span className="error__message">{errorMessage}</span>}
           </div>
           <div className='contact__buttons'>
-            {!loading && <button type='reset' onClick={resetForm}>reset</button>}
-            {!loading && <button type='submit'>send</button>}
+            {!formState.submitting && <button type='reset' onClick={resetForm}>reset</button>}
+            {!formState.submitting && <button type='submit'>send</button>}
           </div>
           <div className='form-feedback'>
-            {loading && <span className='loading'>Sending...</span>}
-            {feedback && <span className='feedback__message'>{feedback}</span> }
-            {error && <span className='error__message'>{error}</span> }
+            {formState.submitting && <span className='loading'>Sending...</span>}
+            {formState.succeeded && <span className='feedback__message'>{feedback}</span> }
+            {formState.errors.length > 0 && <span className='error__message'>{error}</span> }
           </div>
         </form>
       </div>            
