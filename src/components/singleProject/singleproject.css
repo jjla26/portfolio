@@ -1,0 +1,32 @@
+.single-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.single-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 100px;
+}
+
+.single-content figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-content img {
+  width: 80%;
+}
+
+@media all and (max-width: 992px) {
+  .single-content {
+    margin: 0;
+  }
+}
