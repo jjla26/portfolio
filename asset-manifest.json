@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1da3ac3c.chunk.css",
+    "main.js": "/portfolio/static/js/main.0211bc6b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.0211bc6b.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.514b33b0.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.514b33b0.js.map",
+    "static/js/2.dcd40e7c.chunk.js": "/portfolio/static/js/2.dcd40e7c.chunk.js",
+    "static/js/2.dcd40e7c.chunk.js.map": "/portfolio/static/js/2.dcd40e7c.chunk.js.map",
+    "static/js/3.bf7576e2.chunk.js": "/portfolio/static/js/3.bf7576e2.chunk.js",
+    "static/js/3.bf7576e2.chunk.js.map": "/portfolio/static/js/3.bf7576e2.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.1da3ac3c.chunk.css.map": "/portfolio/static/css/main.1da3ac3c.chunk.css.map",
+    "static/js/2.dcd40e7c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.dcd40e7c.chunk.js.LICENSE.txt",
+    "static/media/angular.782b3f28.svg": "/portfolio/static/media/angular.782b3f28.svg",
+    "static/media/css.8bb8d62d.svg": "/portfolio/static/media/css.8bb8d62d.svg",
+    "static/media/github.bda5260d.svg": "/portfolio/static/media/github.bda5260d.svg",
+    "static/media/html.de4a9d75.svg": "/portfolio/static/media/html.de4a9d75.svg",
+    "static/media/javascript.d9304bef.svg": "/portfolio/static/media/javascript.d9304bef.svg",
+    "static/media/jest.688075c4.svg": "/portfolio/static/media/jest.688075c4.svg",
+    "static/media/linkedin.5779a165.svg": "/portfolio/static/media/linkedin.5779a165.svg",
+    "static/media/node.6fad89d4.svg": "/portfolio/static/media/node.6fad89d4.svg",
+    "static/media/profile.cbe3e272.png": "/portfolio/static/media/profile.cbe3e272.png",
+    "static/media/rails.f4ff4ab4.svg": "/portfolio/static/media/rails.f4ff4ab4.svg",
+    "static/media/react.a4fbce3b.svg": "/portfolio/static/media/react.a4fbce3b.svg",
+    "static/media/redux.c85d950a.svg": "/portfolio/static/media/redux.c85d950a.svg",
+    "static/media/stackoverflow.bde8e565.svg": "/portfolio/static/media/stackoverflow.bde8e565.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.514b33b0.js",
+    "static/js/2.dcd40e7c.chunk.js",
+    "static/css/main.1da3ac3c.chunk.css",
+    "static/js/main.0211bc6b.chunk.js"
+  ]
+}
