@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.REACT_APP_PUBLIC_URL}>
       <Switch>
         <Route exact path='/' render={() => <HomePage handleSwitch={handleSwitch} switchValue={switchValue} />}/>
         <Route exact path='/projects' component={AllProjects}/>
