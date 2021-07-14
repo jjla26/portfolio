@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './projects.css'
 
@@ -21,10 +22,11 @@ export default function projectCard(props) {
           <p>{project.description}</p>
         </div>
         <div>
-          {project.webpage && <a className="projects__links" href={project.webpage} target="___black">Visit Webpage</a>}
-          {project.githubSecondary ? <a className="projects__links" href={project.github} target="___black">Source Code Frontend</a> : project.github && <a href={project.github} target="___black">Source Code</a> }
-          {project.githubSecondary && <a className="projects__links" href={project.github} target="___black">Source Code Backend</a>}
-          {project.playstore && <a className="projects__links" href={project.webpage} target="___black">Playstore</a>}
+          {project.webpage && <div><a className="projects__links" href={project.webpage} target="___black">Visit Webpage</a></div>}
+          {project.githubSecondary ? <div><a className="projects__links" href={project.github} target="___black">Source Code Frontend</a></div> : project.github && <div><a href={project.github} target="___black">Source Code</a></div> }
+          {project.githubSecondary && <div><a className="projects__links" href={project.github} target="___black">Source Code Backend</a></div>}
+          {project.playstore && <div><a className="projects__links" href={project.webpage} target="___black">Playstore</a></div>}
+          {project.body && <div><Link a className="projects__links" to={`/projects/${project.slug.current}`}>See case study</Link></div>}
         </div>
       </div>
     </div> 
