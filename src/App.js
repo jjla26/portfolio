@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import Footer from './components/footer/Footer';
 
@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <Router basename={process.env.REACT_APP_PUBLIC_URL}>
+    <Router basename='/'>
       <Switch>
         <Route exact path='/' render={() => <HomePage handleSwitch={handleSwitch} switchValue={switchValue} />}/>
         <Route exact path='/projects' component={AllProjects}/>
