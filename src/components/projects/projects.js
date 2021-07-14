@@ -20,6 +20,7 @@ export default function Projects() {
           githubSecondary,
           playstore,
           tags,
+          body,
           publishedAt,
           projectType,
           mainImage{
