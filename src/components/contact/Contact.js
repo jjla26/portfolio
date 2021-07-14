@@ -22,7 +22,6 @@ export default function Contact() {
     if(validate()){
       try {
         await handleSubmit(e)  
-        console.log("asdasdasdsadad enviado")
         resetForm()
         setFeedback('Your message was successfully sent !')
         setTimeout(() => setFeedback(''), 4000)
