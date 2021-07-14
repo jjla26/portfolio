@@ -14,6 +14,11 @@ const projectModel = {
       type: 'url',
     },
     {
+      name: 'main',
+      title: 'Main',
+      type: 'boolean',
+    },
+    {
       name: 'githubSecondary',
       title: 'Github secondary',
       type: 'url',
