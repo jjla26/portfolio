@@ -41,7 +41,7 @@ export default function About() {
         </div>
       </div>
       <div className='about__cv'>
-        <a href='https://career-documents-jjla.s3.eu-central-1.amazonaws.com/CV_Julio_Lopez_l.pdf' target='_blank' rel='noreferrer'>
+        <a href='https://career-documents-jjla.s3.eu-central-1.amazonaws.com/julio-lopez-resume.pdf' target='_blank' rel='noreferrer'>
           Find my resume here!
         </a>
       </div>
