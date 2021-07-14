@@ -39,7 +39,7 @@ export default function Projects() {
       <h2 className="projects__title">PROJECTS</h2>
       <div className="projects__container">
         {projects.map(project =>
-          <ProjectCard project={project}/>
+          <ProjectCard key={project.slug.current} project={project}/>
         )}
         <Link to="/projects">sell all the projects</Link>
       </div>
