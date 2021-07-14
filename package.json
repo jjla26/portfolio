@@ -2,7 +2,7 @@
   "name": "web-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jjla26.github.io/portfolio",
+  "homepage": "juliolopezdev.com",
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.11.0",
