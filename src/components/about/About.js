@@ -17,13 +17,15 @@ export default function About() {
       <div className='about__content'>
         <div className='about__description'>
             <p>
-              Let me give you a short intro about myself: I studied Electronic Enginneering in Venezuela, <a href='https://goo.gl/maps/Jkfdf6aS53Ejz7aR7' target='_blank'>Barquisimeto</a>. My passion has always been Web 
-              Development. Therefore I decided to become a Web Developer. My experience comes from doing 
-              numerous courses and self-studying.
+              Let me give you a short intro about myself: I am a skilled full stack web developer with a background in electronic engineering.
+              I’ve worked as a Web Developer for the past three years, delivering great results to my employers and automating processes which 
+              helped the companies to be more efficient.
+              My technical background in engineering helps me to always find the best solution to a problem.
+              This combined with my passion for learning and being challenged makes me a great asset to any team or organization.
             </p>
             <p>
-              In my journey I have worked for a couple of companies in Santiago de Chile. My main focus is to create Web Pages with 
-              an excelent User Experience.
+              In my journey I have worked with many technologies, for companies and personal projects, such as: 
+              HTML, CSS, Javascript, React, React Native, Redux, Angular, Ruby on Rails, Node, Jest, etc.
             </p>
         </div>
         <div className='about__skills'>
