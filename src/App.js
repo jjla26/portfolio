@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
         <Route exact path='/' render={() => <HomePage handleSwitch={handleSwitch} switchValue={switchValue} />}/>
         <Route exact path='/projects' component={AllProjects}/>
