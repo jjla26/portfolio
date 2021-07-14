@@ -10,7 +10,6 @@ import './singleproject.css'
 export default function SingleProject() {
   const [ project, setProject ] = useState(null)
   const { id } = useParams()
-  console.log(project, id)
 
   useEffect(() => {
     sanityClient.fetch(
