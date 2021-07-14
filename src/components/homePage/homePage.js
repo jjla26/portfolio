@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import Navigation from '../navigation/Navigation'
 import Banner from '../banner/Banner'
 import About from '../about/About'
-import Footer from '../footer/Footer'
 import Contact from '../contact/Contact'
 import Projects from '../projects/Projects'
 import ThemeSwitch from '../themeSwitch/ThemeSwitch'
